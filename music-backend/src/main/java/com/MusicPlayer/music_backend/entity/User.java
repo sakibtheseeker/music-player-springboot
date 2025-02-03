@@ -33,6 +33,9 @@ public class User {
 	@Column(name="email",nullable=false, unique=true)
 	private String emailId;
 	
+	@Column(name="password",nullable=false)
+	private String password;
+	
 	@Column(name="phoneno")
 	private Integer phoneNo;
 
