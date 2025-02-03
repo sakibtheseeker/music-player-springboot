@@ -8,7 +8,21 @@ public class UserMapper {
 	public static UserDto mapToUserDto(User user){
 		return new UserDto(
 				user.getId(),
-				user.
-			
+				user.getFirstName(),
+				user.getLastName(),
+				user.getEmailId(),
+				user.getPhoneNo()
 				);
 	}
+	
+	public static User mapToUser(UserDto userDto) {
+		return new User(
+				userDto.getId(),
+				userDto.getFirstName(),
+				userDto.getLastName(),
+				userDto.getEmailid(),
+				userDto.getPhoneno()
+				);
+				
+	}
+}

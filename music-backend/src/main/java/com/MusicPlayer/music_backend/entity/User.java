@@ -31,10 +31,12 @@ public class User {
 	private String lastName;
 	
 	@Column(name="email",nullable=false, unique=true)
-	private String emailid;
+	private String emailId;
 	
 	@Column(name="phoneno")
-	private Integer phoneno;
+	private Integer phoneNo;
+
+	
 	
 
 }
