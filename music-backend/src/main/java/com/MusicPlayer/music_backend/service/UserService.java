@@ -1,8 +1,13 @@
 package com.MusicPlayer.music_backend.service;
 
+
+
 import com.MusicPlayer.music_backend.dto.UserDto;
 
 public interface UserService {
-	UserDto createUserDto(UserDto userDto);
+	UserDto createUser(UserDto userDto);
+	
+	UserDto getUserById(Long userId);	
+	
 	
 }
