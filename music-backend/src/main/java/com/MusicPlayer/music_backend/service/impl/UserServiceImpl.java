@@ -35,4 +35,25 @@ public class UserServiceImpl  implements UserService{
 		return UserMapper.mapToUserDto(user);
 	}
 
+	@Override
+	public UserDto updateUser(Long userId, UserDto updatedUser) {
+		// TODO Auto-generated method stub
+		 User user=userRepository.findById(userId).orElseThrow(
+				() -> new ResourceNotFoundException("User not exist with given id" +userId)
+				);
+		
+		 user.setFirstName(updatedUser.getFirstName());
+		 user.setLastName(updatedUser.getLastName());
+		 user.setEmailId(updatedUser.getEmailid());
+		 user.setPassword(updatedUser.getPassword());
+		 user.setPhoneNo(updatedUser.getPhoneno());
+		 
+		 
+		 User updatedUserObj=userRepository.save(user);
+		
+		return null;
+	}
+	
+	
+
 }
